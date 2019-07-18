@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<app-confirm-dialog></app-confirm-dialog>  
+
+<div class="panel panel-primary">
+  <div class="panel-heading" style="text-align: center">
+    <h1> Create Training</h1>
+  </div>
+  
+  <div class="panel-body" style="border: none">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="form-group">
+          <label>Training Name</label>
+          <input id="TrainingName" type="text" class="form-control" name="TrainName" [(ngModel)] = "oTraining.sTrainingName">
+      </div>
+
+      <div class="form-group">
+          <label>Start Date </label>
+          <input id="stDate" type="text" bsDatepicker class="form-control" [(ngModel)] = "oTraining.stDate">
+      </div>
+
+      <div class="form-group">
+          <label>End Date </label>
+          <input id="endDate" type="text" bsDatepicker class="form-control" [(ngModel)] = "oTraining.endDate">
+      </div>
+
+      <div class="panel-footer">
+          <button class="btn btn-primary" 
+            (click)="InvokeTrainingData()">Add Training Data
+         </button>
+      </div>
+      
+</div>
+
+</div>
+{{oTraining | json}}
+
+
+
+<router-outlet></router-outlet>
